@@ -1,0 +1,68 @@
+baseURL = "https://wangfei1010.github.io/blog/"
+title = "wangfei 的博客"
+theme = "PaperMod"
+
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-cn"
+hasCJKLanguage = true
+enableRobotsTXT = true
+enableEmoji = true
+summaryLength = 70
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = "production"
+  description = "技术笔记与随笔"
+  author = "wangfei"
+  defaultTheme = "auto"
+  DateFormat = "2006-01-02"
+  mainSections = ["posts"]
+
+  ShowReadingTime = true
+  ShowWordCount = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowAllPagesInArchive = true
+  ShowFullTextinRSS = false
+  disableSpecial1stPost = true
+
+  homeInfoParams = { Title = "Hi \U0001F44B", Content = "这里记录技术笔记与随笔。文章在 content/posts/ 下，提 PR 合并到 main 后自动部署。" }
+
+  [params.socialIcons]
+    github = "https://github.com/wangfei1010"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[menu]
+  [[menu.main]]
+    name = "文章"
+    pageRef = "posts"
+    weight = 10
+  [[menu.main]]
+    name = "归档"
+    url = "archives/"
+    weight = 20
+  [[menu.main]]
+    name = "标签"
+    pageRef = "tags"
+    weight = 30
+  [[menu.main]]
+    name = "搜索"
+    url = "search/"
+    weight = 40

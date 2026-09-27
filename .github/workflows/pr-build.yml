@@ -1,0 +1,26 @@
+name: PR build check
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.166.0"
+          extended: true
+
+      - name: Build (no deploy)
+        run: hugo --minify --gc --baseURL "https://wangfei1010.github.io/blog/"
