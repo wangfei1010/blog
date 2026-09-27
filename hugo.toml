@@ -3,7 +3,7 @@ title = "wangfei 的博客"
 theme = "PaperMod"
 
 defaultContentLanguage = "zh-cn"
-languageCode = "zh-cn"
+locale = "zh-cn"
 hasCJKLanguage = true
 enableRobotsTXT = true
 enableEmoji = true
@@ -33,8 +33,9 @@ summaryLength = 70
 
   homeInfoParams = { Title = "Hi \U0001F44B", Content = "这里记录技术笔记与随笔。文章在 content/posts/ 下，提 PR 合并到 main 后自动部署。" }
 
-  [params.socialIcons]
-    github = "https://github.com/wangfei1010"
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/wangfei1010"
 
 [taxonomies]
   tag = "tags"
